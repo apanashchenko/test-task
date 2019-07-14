@@ -47,17 +47,14 @@ tasks.withType(Test) {
         includeTags 'smoke'
     }
 
-//    TODO need fix parallel execution
-//    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
-
-
     testLogging.showStandardStreams = true
 
     systemProperties = [
             'junit.jupiter.execution.parallel.enabled': true,
             'junit.jupiter.extensions.autodetection.enabled': true,
+            'junit.jupiter.execution.parallel.mode.default': 'concurrent',
             'junit.jupiter.execution.parallel.config.strategy': 'fixed',
-            'junit.jupiter.execution.parallel.config.fixed.parallelism': 1,
+            'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty('thread.count', '1'),
             'selenide.browser': System.getProperty('browser', 'chrome')
     ]
 

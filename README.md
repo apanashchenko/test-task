@@ -10,6 +10,7 @@
 Gradle launch command should consist of several parts:
 *   Gradle build and run local test - ```./gradlew clean test```
 *   Select local browser (optional) - ```-Dbrowser=firefox``` Chrome is used by default
+*   Parallel test count - ```-Dthread.count=2``` 1 is used by default
 
 **Test report:**
 *   ```./gradlew allureReport``` - generate Allure report (need run command for init allure)
