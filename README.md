@@ -5,6 +5,9 @@
 *   [jUnit5](https://junit.org/junit5/)- testing framework;
 *   [Allure](http://allure.qatools.ru/) -  test report;
 
+**!!!Important!!! - for running test from IDE need enabled annotation processing
+ (Preferences -> Build, Execution, Deployment -> Compiler -> Annotation Processor -> Enable annotation processing)**
+
 **Run tests:**
     
 Gradle launch command should consist of several parts:
